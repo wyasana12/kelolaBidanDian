@@ -9,4 +9,3 @@
   <section class="section dashboard">
   </section>
 @endsection
-

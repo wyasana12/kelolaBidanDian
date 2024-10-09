@@ -72,8 +72,8 @@
                                     <a class="dropdown-item" href="\pasien">Lihat Biodata Pasien</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Another action</a
+                                    <a class="dropdown-item" href="\pasien\daftar"
+                                        >Daftar Janji Temu</a
                                     >
                                 </li>
                             </ul>
@@ -119,6 +119,11 @@
         </nav>
 
         <main class="container">
+        @if (!empty(session('success')))
+            <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
             @yield('content')
         </main>
 

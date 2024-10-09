@@ -35,7 +35,7 @@
 @include('panel.layouts.header')
 @include('panel.layouts.aside')
 
-<main id="main" class="main">
+<main id="main" class="main" style="height: 100vh">
 @yield('content')
 </main>
 @include('panel.layouts.footer')
