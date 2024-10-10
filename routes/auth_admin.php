@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Auth\RegisterController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\PengumumanController;
 
 Route::prefix('admin')->middleware('guest:admin')->group(function() {
@@ -20,4 +21,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function() {
     Route::get('pengumumans/create', [PengumumanController::class, 'create'])->name('admin.pengumumans.create');
     Route::post('pengumumans', [PengumumanController::class, 'store'])->name('admin.pengumumans.store');
     Route::post('logout', [LoginController::class, 'destroy'])->name('admin.logout');
+    Route::get('jadwal', [JadwalController::class, 'index'])->name('admin.jadwal');
+    Route::get('jadwal/create', [JadwalController::class, 'create'])->name('admin.jadwals.create');
+    Route::post('jadwals', [JadwalController::class, 'store'])->name('admin.jadwals.store');
 });

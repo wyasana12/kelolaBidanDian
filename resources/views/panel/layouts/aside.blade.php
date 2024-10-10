@@ -24,6 +24,13 @@
           <i class="bi bi-megaphone"></i>
           <span>Pengumuman</span>
         </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ url('admin/jadwal') }}">
+          <i class="bi bi-megaphone"></i>
+          <span>jadwal</span>
+        </a>
       </li><!-- End Role Page Nav -->
     </ul>
 
